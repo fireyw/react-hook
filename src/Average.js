@@ -11,7 +11,6 @@ const Average = () => {
     const [list, setList] = useState([]);
     const [number, setNumber] = useState('');
     const inputEl =useRef(null);
-
     const onChange = useCallback(e => {
         console.log('onChange렌더링');
         setNumber(e.target.value);
