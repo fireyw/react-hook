@@ -4,7 +4,6 @@ import RefSample from "./RefSample";
 import Info from "./Info";
 import ForwardRef from "./ForwardRef";
 import Struct from "./Struct";
-
 function App() {
     let name = 'yw';
     let age = '38';
@@ -17,10 +16,11 @@ function App() {
     let test=10;
     return (
         <>
-            <Struct data={{data}} />
-            <Struct {...data}/>
-            <Struct {...{name, age, index}} />
-            <Struct {...{name:name, age:age, index:index}} />
+            1<Struct name={data.name} />
+            2<Struct {...data}/>
+            3<Struct {...{name, age, index}} />
+            4<Struct {...{name:data.name, age:age, index:index}} />
+
         </>
     );
 }
